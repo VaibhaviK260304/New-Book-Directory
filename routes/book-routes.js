@@ -1,8 +1,6 @@
-import express from 'express'
-import { Router } from 'express'
-import {RouterProvider, createBrowserRouter} from 'react-router-dom'
+import Books from "./../model/Book.js";
 
-const router = express.Router()
-router.get("/",(req, res, next)=>{
-    
-})
+const getBook = async (req, res) => {
+
+}
+export { getBook }
