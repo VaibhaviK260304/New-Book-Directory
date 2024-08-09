@@ -1,4 +1,4 @@
-import {Schema, model} from "mongoose";
+import { Schema, model } from "mongoose";
 
 const bookSchema = new Schema({
   name: {
@@ -20,11 +20,13 @@ const bookSchema = new Schema({
   available: {
     type: Boolean,
   },
-  image: {
-    type: String,
-    required: true,
-  },
+  image: { 
+    type: String, 
+    required: true, 
+  }
+}, {
+  timestamps: true
 });
 
 const Book = model("books", bookSchema)
-export default Book 
+export default Book
