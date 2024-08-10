@@ -24,7 +24,13 @@ const bookSchema = new Schema({
   },
   available: {
     type: Boolean
+  },
+  User:{
+    type: Schema.Types.ObjectId, 
+    ref: 'User',
   }
+},{
+  timestamps: true
 });
 
 const Book = model("books", bookSchema)
