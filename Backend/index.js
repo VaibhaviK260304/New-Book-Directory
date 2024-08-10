@@ -1,9 +1,11 @@
 import express from 'express';
+import { Router } from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
+import User from "./model/User.js"
 import { getAllBooks, addbooks, getById, updateBook, deleteBook } from './controllers/book.js';
 
 const app = express();
@@ -19,6 +21,37 @@ app.post('/book', addbooks);
 app.get('/book/:id', getById);
 app.put('/book/:id', updateBook);
 app.delete('/book/:id', deleteBook);
+
+app.post('/signup',async (req, res)=>{
+    const {name, email, password, dob} = req.body;
+    const user = new User({
+        name, 
+        email, 
+        password, 
+        dob: new Date(dob)
+    });
+    try {
+    const savedUser = await user.save();
+    res.json({
+        success: true,
+        message: 'User created successfully',
+        user: savedUser
+    })
+    }
+    catch(e){
+        res.json({
+            success: false,
+            message: e.message,
+            data: null
+        })
+    }
+
+})
+app.post('/login',(req, res)=>{
+    const {email, password} = req.body;
+
+})
+
 
 const connectDB = async () => {
     try {

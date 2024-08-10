@@ -1,0 +1,141 @@
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+    transform: scale(1.03);
+
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #555;
+}
+
+.card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.list {
+    text-align: center;
+    margin: 30px auto;
+    color: black;
+}
+
+.more-info {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.header button:hover {
+    background-color: #0056b3;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #555;
+}
+
+.card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.list {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-img {
+    max-height: 150px;
+}
+
+.more-info {
+    display: block;
+    margin-top: 10px;
+}
+.add-book{
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
