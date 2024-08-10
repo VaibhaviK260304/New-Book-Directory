@@ -9,8 +9,11 @@ const getAllBooks = async (req, res) => {
             data: books
         });
     } catch (err) {
-        res.json({ success: false, message: "Failed to fetch books", error: err.message });
-
+        res.json({ 
+            success: false, 
+            message: "Failed to fetch books", 
+            error: err.message 
+        });
     }
 }
 
@@ -36,7 +39,7 @@ const getById = async(req, res)=>{
 }
 
 const addbooks = async (req, res) => {
-    const { name, author, description, price, available, image } = req.body;
+    const { name, author, description, price, image, available,} = req.body;
     let book;
     try {
         book = new Books({
@@ -44,8 +47,8 @@ const addbooks = async (req, res) => {
             author,
             description,
             price,
-            available,
-            image
+            image,
+            available        
         });
         await book.save();
         return res.json({
@@ -65,7 +68,7 @@ const addbooks = async (req, res) => {
 
 const updateBook = async(req, res)=>{
     const id = req.params.id;
-    const {name, author, description, price, available, image} = req.body;
+    const {name, author, description, price, image, available} = req.body;
     let book;
     try{
         book = await Books.findByIdAndUpdate(id, {
@@ -73,8 +76,8 @@ const updateBook = async(req, res)=>{
             author,
             description,
             price,
-            available,
-            image
+            image,
+            available
         });
         book = await book.save()
     }

@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { addbooks, getAllBooks, getById, updateBook, deleteBook } from './controllers/book.js';
+import { getAllBooks, addbooks, getById, updateBook, deleteBook } from './controllers/book.js';
 
 const app = express();
 app.use(express.json());
@@ -36,4 +36,16 @@ const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
+
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
+        console.error('Bad JSON');
+        return res.status(400).send({ success: false, message: 'Invalid JSON' });
+    }
+    next();
 });

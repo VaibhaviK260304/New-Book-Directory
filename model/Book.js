@@ -3,29 +3,28 @@ import { Schema, model } from "mongoose";
 const bookSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   author: {
     type: String,
-    required: true,
+    required: true
   },
   description: {
     type: String,
-    required: true,
+    required: true
   },
   price: {
     type: Number,
-    required: true,
+    required: true
+  },
+  image: 
+  { 
+    type: String, 
+    required: true
   },
   available: {
-    type: Boolean,
-  },
-  image: { 
-    type: String, 
-    required: true, 
+    type: Boolean
   }
-}, {
-  timestamps: true
 });
 
 const Book = model("books", bookSchema)
