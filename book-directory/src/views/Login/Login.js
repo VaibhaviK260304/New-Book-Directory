@@ -44,7 +44,7 @@ function Login() {
     <div>
       <header className="header">
         <h1>Login Page</h1>
-        <button onClick={() => navigate('/')}>Home</button>
+        {/* <button onClick={() => navigate('/')}>Home</button> */}
       </header>
       <h1 className='signup-login-heading'>USER LOGIN</h1>
       <div className='signup-login-form'>
