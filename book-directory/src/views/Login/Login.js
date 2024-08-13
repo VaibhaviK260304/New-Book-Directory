@@ -10,6 +10,13 @@ function Login() {
 
     const loginNow = async (e) => {
         e.preventDefault();
+
+        // Validation check
+        if (!email || !password) {
+            toast.error('Please fill in both email and password fields.');
+            return;
+        }
+
         try {
             const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, {
                 email,
@@ -21,15 +28,15 @@ function Login() {
                 toast.success("Logged in successfully!");
                 toast.loading("Redirecting to home..")
                 setTimeout(() => {
-                    toast.dismiss()
-                    window.location.href = '/';
+                    toast.dismiss();
+                    navigate('/');
                 }, 3000);
             } else {
-                toast.error(response.data.message);
+                toast.error('User not found. Please check your email and password.');
             }
         } catch (error) {
             console.log('Login Error :', error);
-            toast.error(error.message);
+            toast.error('An error occurred during login. Please try again.');
         }
     };
 
@@ -43,14 +50,14 @@ function Login() {
             <div className='signup-login-form'>
                 <input
                     type='email'
-                    placeholder='Email'
+                    placeholder='Email     (eg. vaibhavi@gmail.com) '
                     className='user-input'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                     type='password'
-                    placeholder='Password'
+                    placeholder='Password    (eg. 1234321)'
                     className='user-input'
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
