@@ -50,6 +50,31 @@ function Home() {
         author: 'Jane Austen',
         url: 'https://www.gutenberg.org/files/1342/1342-h/1342-h.htm'
     },
+    {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz4HBtHgMm8WVR1HpZ2xd0oQMiPgpoxuhrUQ&s",
+      name: "The Brothers Karamazov",
+      author: "Fyodor Dostoevsky",
+      url: 'https://www.gutenberg.org/files/28054/old/28054-pdf.pdf'
+    },
+    {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiUBSwH_1CqFVhxiZSG8AbaemFJf_e_4Cz8A&s",
+      name: "Crime and Punishment",
+      author: "Fyodor Dostoevsky",
+      url: 'https://www.gutenberg.org/files/2554/2554-h/2554-h.htm'
+    },   
+    {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWraAHTm9BLhe4iN_5ULgdEzmk8ek0cJ1b1g&s",
+      name: "The Odyssey",
+      author: "Homer",
+      url: 'https://static1.squarespace.com/static/58d6b5ff86e6c087a92f8f89/t/5913e9ce1b631b147665d304/1494477271234/Homer_The_Odyssey.pdf'
+    },    
+    {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwKNi0COOldBsSrbejznVLCMe_15yU5F_OtA&s",
+      name: "Moby Dick",
+      author: "Herman Melville",
+      url: 'https://www.gutenberg.org/files/2701/2701-h/2701-h.htm'
+    }
+  
   ];
 
   return (
