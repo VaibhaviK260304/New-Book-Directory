@@ -1,4 +1,4 @@
-import User from './../models/User.js'
+import User from './../model/User.js'
 
 const postSignup = async (req, res)=>{
     const {name, email, password, dob} = req.body;
@@ -27,27 +27,16 @@ const postSignup = async (req, res)=>{
     }
 
 }
-const postLogin =async (req, res)=>{
-    const {email, password} = req.body;
-    
-    const user = await User.findOne({
-        email: email,
-        password: password,
-    });
-    if(user){
-        return res.json({
-            success: true,
-            message: 'User logged in successfully',
-            data: user
-        })
+const postLogin =async (req, res)=>{try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+    if (!user) {
+        return res.status(400).json({ success: false, message: "User not found" });
     }
-    else{
-        return res.json({
-            success: false,
-            message: 'Invalid email or password',
-            data: null
-        })
-    }
+    res.json({ success: true, message: "Login successful", data: user });
+} catch (err) {
+    res.json({ success: false, message: "Failed to login", error: err.message });
+}
 }
 
 export {postSignup, postLogin}

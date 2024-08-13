@@ -6,7 +6,7 @@ import toast, {Toaster} from 'react-hot-toast';
 import ImgAdd from "./add.png"
 
 function Home() {
-  const navigate = useNavigate();
+  useNavigate();
 
   const handleLogout = () => {
     // console.log('User logged out');
