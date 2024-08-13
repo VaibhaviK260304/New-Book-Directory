@@ -41,7 +41,7 @@ function Login() {
     };
 
     return (
-        <div>
+        <div> 
             <header className="header">
                 <h1>Login Page</h1>
                 <button onClick={() => navigate('/')}>Home</button>

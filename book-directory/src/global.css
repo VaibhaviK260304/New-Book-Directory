@@ -4,7 +4,6 @@
   align-items: center;
   padding: 10px 20px;
   background-color: #f8f9fa;
-  border-bottom: 1px solid #ddd;
 }
 
 .header h1 {
@@ -32,12 +31,18 @@
 }
 
 .signup-login-form {
-  display: flex;
-  flex-direction: column;
+  width: 350px;
+  height: auto;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px auto;
+  padding: 25px;
+  background-image: url("https://www.shutterstock.com/image-photo/book-stack-library-room-blurred-600nw-1360320602.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+  border: 1px solid black;
 }
-
 .user-input {
   margin: 10px 0;
   padding: 10px;

@@ -9,8 +9,14 @@ function Home() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    console.log('User logged out');
-    navigate('/login'); 
+    // console.log('User logged out');
+    // toast.success('Logged out successfully')
+    // navigate('/login');
+    localStorage.clear()
+        toast.success("Loged out successfully!!")
+        setTimeout(()=>{
+          window.location.href = '/login'
+        }, 3000)
   };
 
   const books = [
