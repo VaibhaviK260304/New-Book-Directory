@@ -18,7 +18,7 @@ function Login() {
 
     setLoading(true);
     try {
-      const url = (`${process.env.REACT_APP_BACKEND_URL}/login`);
+      const url = (`${process.env.REACT_APP_BACKEND_URL}login`);
       const response = await axios.post(url, { email, password });
       setLoading(false);
       if (response.data.success) {

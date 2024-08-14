@@ -9,7 +9,6 @@ import AddBook from './views/AddBook/AddBook.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-console.log(process.env.REACT_APP_BACKEND_URL)
 const router = createBrowserRouter([
   {
     path: '/',
