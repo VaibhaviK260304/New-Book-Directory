@@ -29,7 +29,7 @@ function AddBook() {
   }, []);
 
   const addBook = async () => {
-    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/book`, {
+    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}book`, {
       user: user._id,
       name: name,
       author: author,
